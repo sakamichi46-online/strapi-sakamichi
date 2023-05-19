@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "image": {
+    "collection": {
       "type": "component",
       "repeatable": true,
       "component": "content.collection",

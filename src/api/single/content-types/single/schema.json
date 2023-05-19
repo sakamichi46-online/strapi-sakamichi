@@ -4,7 +4,8 @@
   "info": {
     "singularName": "single",
     "pluralName": "singles",
-    "displayName": "single"
+    "displayName": "single",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,12 +25,12 @@
       "required": true
     },
     "cdImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "type": {
       "type": "enumeration",
@@ -45,6 +46,14 @@
       "relation": "manyToMany",
       "target": "api::member.member",
       "inversedBy": "singles"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
