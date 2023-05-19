@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trivias",
+  "info": {
+    "singularName": "trivia",
+    "pluralName": "trivias",
+    "displayName": "trivia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trivia": {
+      "type": "richtext",
+      "required": true
+    },
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member"
+    }
+  }
+}
