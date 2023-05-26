@@ -18,9 +18,9 @@
       "component": "content.collection",
       "required": false
     },
-    "member": {
+    "members": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::member.member",
       "inversedBy": "galleries"
     }

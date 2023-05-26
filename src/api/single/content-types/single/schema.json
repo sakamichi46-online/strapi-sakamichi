@@ -24,14 +24,6 @@
       "type": "date",
       "required": true
     },
-    "cdImage": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "type": {
       "type": "enumeration",
       "enum": [
@@ -54,6 +46,60 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "center": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member"
+    },
+    "relatedSong": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.single"
+    },
+    "otherCover": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "Nogizaka46",
+        "Sakurazaka46",
+        "Hinatazaka46",
+        "Keyakizaka46"
+      ],
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "default": "Sony Music Entertainment Japan",
+      "required": true
+    },
+    "trivia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.trivia"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "tagsSeo": {
+      "type": "string",
+      "required": true
+    },
+    "backcover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     }
   }
 }

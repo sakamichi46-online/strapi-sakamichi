@@ -92,11 +92,6 @@
       "repeatable": true,
       "component": "profile.nickname"
     },
-    "tags": {
-      "type": "component",
-      "repeatable": true,
-      "component": "metadata.tags"
-    },
     "profileImage": {
       "type": "component",
       "repeatable": true,
@@ -107,12 +102,6 @@
       "relation": "manyToMany",
       "target": "api::single.single",
       "mappedBy": "members"
-    },
-    "galleries": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::gallery.gallery",
-      "mappedBy": "member"
     },
     "debut": {
       "type": "date",
@@ -141,6 +130,30 @@
     "lgTwo": {
       "type": "string",
       "required": true
+    },
+    "galleries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gallery.gallery",
+      "mappedBy": "members"
+    },
+    "oldProfile": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tagseo": {
+      "type": "string",
+      "required": true
+    },
+    "gif_galleries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gif-gallery.gif-gallery",
+      "mappedBy": "member"
     }
   }
 }
